@@ -12,7 +12,7 @@ struct AgeCalculatorItemView: View {
     let ageCalculator: AgeCalculator
     var body: some View {
         HStack{
-            Text("\(ageCalculator.result) - \(ageCalculator.yearBorn)")
+            Text("\(ageCalculator.result) - \(ageCalculator.yearBorn.formatted())")
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
                 
