@@ -18,10 +18,7 @@ struct AgeCalculatorView: View {
     // MARK: Computed properties
     var body: some View {
         VStack {
-            
-            // Extra space at top
-            Spacer()
-            
+                        
             // OUTPUT
             if let ageCalculator = viewModel.ageCalculator {
                 
