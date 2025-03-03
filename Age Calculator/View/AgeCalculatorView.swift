@@ -22,11 +22,9 @@ struct AgeCalculatorView: View {
             // OUTPUT
             if let ageCalculator = viewModel.ageCalculator {
                 
-            // Add a button so that the result can be saved
                 VStack{
                     Text ("You are a \((ageCalculator.result))")
                                             
-                    // Add a button so that the result can be saved
                     Button {
                         viewModel.saveResult()
                         // DEBUG: Show how many items are in the resultHistory array
@@ -38,7 +36,9 @@ struct AgeCalculatorView: View {
                     .padding(.bottom)
                 }
                     
-                    
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
+                .frame(height: 250)
                     
                 } else {
                     
@@ -57,6 +57,19 @@ struct AgeCalculatorView: View {
                     .textFieldStyle(.roundedBorder)
                 
             }
+        // Show a title for the history
+        HStack {
+            Text("History")
+                .bold()
+            Spacer()
+        }
+        .padding(.vertical)
+         
+        // Iterate over the history of results
+        List(viewModel.resultHistory) { priorResult in
+            AgeCalculatorItemView(ageCalculator: priorResult)
+        }
+        .listStyle(.plain)
                 .padding()
                 .navigationTitle("Age Calculator")
         }

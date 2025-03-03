@@ -14,6 +14,9 @@ struct AgeCalculator: Identifiable {
     
     var yearBorn: Double
     var result: String {
+        if yearBorn > 1946 {
+            return "Does Not Exist"
+        }
         if yearBorn < 1946 {
             return "Silent Generation"
         }

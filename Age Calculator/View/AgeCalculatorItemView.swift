@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct AgeCalculatorItemView: View {
+    //MARK: Stored Properties
+    let ageCalculator: AgeCalculator
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Text("\(ageCalculator.result)")
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
+                
+                Spacer()
+        }
     }
 }
 
 #Preview {
-    AgeCalculatorItemView()
+    List{
+        AgeCalculatorItemView(ageCalculator: AgeCalculator(yearBorn: 2000))
+    }
+    .listStyle(.plain)
 }
+
