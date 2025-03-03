@@ -6,17 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E910C32C2D763FF900167C8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E910C3262D763FF900167C8E /* Preview Assets.xcassets */; };
+		E910C32D2D763FF900167C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E910C3292D763FF900167C8E /* Assets.xcassets */; };
+		E910C32E2D763FF900167C8E /* Age_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910C3282D763FF900167C8E /* Age_CalculatorApp.swift */; };
+		E910C32F2D763FF900167C8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910C32A2D763FF900167C8E /* ContentView.swift */; };
+		E910C3322D76403700167C8E /* AgeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910C3312D76403700167C8E /* AgeCalculator.swift */; };
+		E910C3352D76407900167C8E /* AgeCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910C3342D76407900167C8E /* AgeCalculatorViewModel.swift */; };
+		E910C3372D76409B00167C8E /* AgeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910C3362D76409B00167C8E /* AgeCalculatorView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E910C3152D763FC500167C8E /* Age Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Age Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E910C3262D763FF900167C8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E910C3282D763FF900167C8E /* Age_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Age_CalculatorApp.swift; sourceTree = "<group>"; };
+		E910C3292D763FF900167C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E910C32A2D763FF900167C8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E910C3312D76403700167C8E /* AgeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeCalculator.swift; sourceTree = "<group>"; };
+		E910C3342D76407900167C8E /* AgeCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeCalculatorViewModel.swift; sourceTree = "<group>"; };
+		E910C3362D76409B00167C8E /* AgeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeCalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		E910C3172D763FC500167C8E /* Age Calculator */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Age Calculator";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E910C3122D763FC500167C8E /* Frameworks */ = {
@@ -32,7 +41,7 @@
 		E910C30C2D763FC500167C8E = {
 			isa = PBXGroup;
 			children = (
-				E910C3172D763FC500167C8E /* Age Calculator */,
+				E910C32B2D763FF900167C8E /* Age Calculator */,
 				E910C3162D763FC500167C8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +52,52 @@
 				E910C3152D763FC500167C8E /* Age Calculator.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E910C3272D763FF900167C8E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E910C3262D763FF900167C8E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E910C32B2D763FF900167C8E /* Age Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				E910C3282D763FF900167C8E /* Age_CalculatorApp.swift */,
+				E910C3302D76400600167C8E /* Model */,
+				E910C3332D76404400167C8E /* ViewModel */,
+				E910C3382D7640A100167C8E /* View */,
+				E910C3292D763FF900167C8E /* Assets.xcassets */,
+				E910C32A2D763FF900167C8E /* ContentView.swift */,
+				E910C3272D763FF900167C8E /* Preview Content */,
+			);
+			path = "Age Calculator";
+			sourceTree = "<group>";
+		};
+		E910C3302D76400600167C8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E910C3312D76403700167C8E /* AgeCalculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E910C3332D76404400167C8E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E910C3342D76407900167C8E /* AgeCalculatorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E910C3382D7640A100167C8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E910C3362D76409B00167C8E /* AgeCalculatorView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +114,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				E910C3172D763FC500167C8E /* Age Calculator */,
 			);
 			name = "Age Calculator";
 			packageProductDependencies = (
@@ -109,6 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E910C32C2D763FF900167C8E /* Preview Assets.xcassets in Resources */,
+				E910C32D2D763FF900167C8E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E910C3372D76409B00167C8E /* AgeCalculatorView.swift in Sources */,
+				E910C32E2D763FF900167C8E /* Age_CalculatorApp.swift in Sources */,
+				E910C3322D76403700167C8E /* AgeCalculator.swift in Sources */,
+				E910C3352D76407900167C8E /* AgeCalculatorViewModel.swift in Sources */,
+				E910C32F2D763FF900167C8E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

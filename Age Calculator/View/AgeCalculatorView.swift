@@ -6,13 +6,59 @@
 //
 
 import SwiftUI
-
+ 
 struct AgeCalculatorView: View {
+    
+    // MARK: Stored properties
+    
+    // Holds the view model, to track current state of
+    // data within the app
+    @State var viewModel = AgeCalculatorViewModel(providedYear: "", recoverySuggestion: "")
+    
+    // MARK: Computed properties
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            // Extra space at top
+            Spacer()
+            
+            // OUTPUT
+            if let ageCalculator = viewModel.ageCalculator {
+                
+            // Add a button so that the result can be saved
+                VStack{
+                    Text ("You are a \((ageCalculator.result))")
+                    
+                    
+                }
+                    
+                    
+                    
+                } else {
+                    
+                    // Show a message indicating that we are
+                    // awaiting reasonable input
+                    ContentUnavailableView(
+                        "Unable to evaluate Age",
+                        systemImage: "gear.badge.questionmark",
+                        description: Text(viewModel.recoverySuggestion)
+                    )
+                    .frame(height: 300)
+                }
+                
+                // INPUT
+                TextField("Year Born", text: $viewModel.providedYear)
+                    .textFieldStyle(.roundedBorder)
+                
+            }
+                .padding()
+                .navigationTitle("Age Calculator")
+        }
+        
     }
-}
-
-#Preview {
-    AgeCalculatorView()
-}
+    
+    #Preview {
+        NavigationStack{
+            AgeCalculatorView()
+        }
+    }

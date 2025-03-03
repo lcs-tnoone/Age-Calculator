@@ -5,14 +5,33 @@
 //  Created by Thomas Noone on 2025-03-03.
 //
 
-import SwiftUI
+import Foundation
 
-struct AgeCalculator: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct AgeCalculator: Identifiable {
+    //MARK: Stored Properties
+    
+    let id = UUID()
+    
+    var yearBorn: Double
+    var result: String {
+        if yearBorn < 1946 {
+            return "Silent Generation"
+        }
+        if yearBorn < 1965 {
+            return "Baby Boomer"
+        }
+        if yearBorn < 1981 {
+            return "Gen X"
+        }
+        if yearBorn < 1997{
+            return "Millennials"
+        }
+        if yearBorn < 2013 {
+            return "Gen Z"
+        }
+        if yearBorn > 2013 {
+            return "Does Not exist"
+        }
+        return ""
     }
-}
-
-#Preview {
-    AgeCalculator()
 }
