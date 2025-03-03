@@ -24,6 +24,8 @@ struct AgeCalculatorView: View {
                 
                 VStack{
                     Text ("You are a \((ageCalculator.result))")
+                        .bold()
+                        .frame(height: 50)
                                             
                     Button {
                         viewModel.saveResult()
@@ -61,7 +63,6 @@ struct AgeCalculatorView: View {
         HStack {
             Text("History")
                 .bold()
-            Spacer()
         }
         .padding(.vertical)
          

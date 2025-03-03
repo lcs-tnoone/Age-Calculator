@@ -10,10 +10,9 @@ import SwiftUI
 struct AgeCalculatorItemView: View {
     //MARK: Stored Properties
     let ageCalculator: AgeCalculator
-    
     var body: some View {
         HStack{
-            Text("\(ageCalculator.result)")
+            Text("\(ageCalculator.result) - \(ageCalculator.yearBorn)")
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
                 
