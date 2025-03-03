@@ -10,6 +10,9 @@ import Foundation
 @Observable
 class AgeCalculatorViewModel {
     
+    
+    var resultHistory: [AgeCalculator] = []
+    
     // MARK: Stored Properties
     var providedYear: String
     var recoverySuggestion: String = ""
@@ -33,7 +36,25 @@ class AgeCalculatorViewModel {
         self.providedYear = providedYear
         self.recoverySuggestion = recoverySuggestion
     }
-}
+   
+    // MARK: Function(s)
+    func saveResult() {
+        
+        // When there is a valid power based on user input...
+        if let yearborn = self.ageCalculator {
+            
+            // ... save that evaluated power at the top of the history of
+            // results
+            //
+            // NOTE: By inserting the newly evaluated power at the top of
+            //       the array, we ensure the user sees
+            //       the most recent result first.
+            self.resultHistory.insert(yearborn, at: 0)
+        }
+        
+    }
 
+
+}
 var viewmodel = AgeCalculatorViewModel(providedYear: "", recoverySuggestion: "")
 
